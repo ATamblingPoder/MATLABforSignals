@@ -1,5 +1,6 @@
 clear all;
 clc;
+subplot(2,1,1)
 t = 0:0.0005:7;
 for i = 1:length(t)
     if(t(i) < 2)
@@ -16,3 +17,10 @@ plot(t,x)
 xlabel('t(s)')
 ylabel('v(t)')
 title('V(t)')
+
+subplot(2,1,2)
+thederiv = gradient(t, x);
+plot(t,thederiv)
+xlabel('t(s)')
+ylabel('dv(t)/dt')
+title('Derivative of above function')
