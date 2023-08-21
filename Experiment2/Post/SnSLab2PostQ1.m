@@ -8,13 +8,13 @@ for i = 1:length(t)
         xa(i) = 0
     end
 end
-subplot(3,2,1)
+subplot(6,1,1)
 plot(t,xa)
 xlabel('t')
 ylabel('xa(t)')
 title('delta(t + 1)')
 
-subplot(3,2,2)
+subplot(6,1,2)
 for i = 1:length(t)
     if(t(i) == -1/2)
         xb1(i) = 1
@@ -33,7 +33,7 @@ xlabel('t')
 ylabel('xb(t)')
 title('delta(t + 1/2) - delta(t + 1/2)')
 
-subplot(3,2,3)
+subplot(6,1,3)
 for i = 1:length(t)
     if(t(i) < 0)
         step(i) = 0
@@ -47,7 +47,7 @@ xlabel('t')
 ylabel('xc(t)')
 title('t * step(t)')
 
-subplot(3,2,4)
+subplot(6,1,4)
 for i = 1:length(t)
     if(t(i) < -2)
         step1(i) = 0
@@ -66,7 +66,7 @@ xlabel('t')
 ylabel('x(t)')
 title('step(t + 2) - step(t - 3)')
 
-subplot(3,2,5)
+subplot(6,1,5)
 for i = 1:length(t)
     if(t(i) < -1)
         ramp1(i) = 0;
@@ -90,7 +90,7 @@ xlabel('t')
 ylabel('x(t)')
 title('ramp(t + 1) - ramp(t) + ramp(t - 2)')
 
-subplot(3,2,6)
+subplot(6,1,6)
 xf = (exp(-t) .* sin(2 * pi * t)) + (exp(-t / 2) .* cos(5 * pi *t));
 plot(t,xf)
 xlabel('t')
