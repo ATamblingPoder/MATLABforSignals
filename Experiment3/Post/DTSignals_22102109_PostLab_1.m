@@ -53,10 +53,10 @@ xe1 = zeros(1, length(n));
 xe2 = xe1;
 for i = 1:length(n)
     if(n(i) >= -3)
-        xe1(i) = n(i);
+        xe1(i) = n(i) + 3;
     end
     if(n(i) >= 3)
-        xe2(i) = n(i);
+        xe2(i) = n(i) - 3;
     end
 end
 xe = xe1 - xe2;
