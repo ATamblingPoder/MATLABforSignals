@@ -41,7 +41,7 @@ subplot(3,2,4);
 xd1 = n >= -1;
 xd2 = n >= 0;
 xd3 = n >= 1;
-xd = xd1 - (2 .* xd2) - xd3;
+xd = xd1 - (2 .* xd2) + xd3;
 stem(n, xd);
 xlabel('n');
 ylabel('x[n]');
