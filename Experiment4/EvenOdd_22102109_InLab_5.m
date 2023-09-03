@@ -1,15 +1,18 @@
 clc;
 clearvars *;
-t = -10:0.1:10;
-u = t > 0;
-un = zeros(1,length(t));
+t = -2:0.1:10;
+x = zeros(1, length(t));
+xn = zeros(1, length(t));
+
 for i = 1:length(t)
-    if(t(i) > -2 && t(i) < 0)
-        un(i) = 1;
+    if(t(i) > 0)
+        x(i) = t(i);
+    end
+    if(t(i) < 0)
+        xn(i) = -t(i);
     end
 end
-x = t .* u;
-xn = (-t) .* un;
+
 
 subplot(4,1,1);
 plot(t, x);
