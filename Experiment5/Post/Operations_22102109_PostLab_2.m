@@ -15,9 +15,7 @@ stem(t2, xa);
 xlabel('n');
 ylabel('X[2n]');
 
-% Graph is wrong, correction required
-t3 = -12:1:6;
-t33 = -4:1/3:2;
+t33 = -1:1/3:1;
 subplot(4,1,3);
 xb = X((3 .* t33) - 1);
 stem(t33, xb);
