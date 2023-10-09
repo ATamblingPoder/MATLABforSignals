@@ -1,0 +1,18 @@
+clc;
+clear;
+n = -10:1:10;
+un = (n >= 0);
+h1 = ((-0.5) .^ n) .* un;
+un5 = (n >= 5);
+h2 = un - un5;
+xn = (n == 0);
+clearvars un un5;
+t = tiledlayout(2,1);
+wn = conv(xn, h1);
+yn = conv(wn, h2);
+nexttile(1);
+stem(yn);
+clearvars yn;
+yn = conv(conv(xn, h1), h2);
+nexttile(2);
+stem(yn);
