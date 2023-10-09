@@ -18,17 +18,30 @@ for i = 1:length(n)
     end
 end
 t = tiledlayout(3, 2);
+title(t, "Q2 - PostLab - 22102109");
 nexttile(1, [1,2]);
 stem(n, xn);
+xlabel('n');
+ylabel('x[n]');
+title('2^n * (u[n+2] - u[n-4])');
 
 nexttile(3, [1, 2]);
 stem(n, hn);
+xlabel('n');
+ylabel('h[n]');
+title('{\it Piecewise-Defined} h[n]')
 
 nexttile(5);
 stem(convolve(xn, hn));
+xlabel('n');
+ylabel('x[n] * h[n]');
+title('Manual Convolve Function');
 
 nexttile(6);
 stem(conv(xn, hn));
+xlabel('n');
+ylabel('x[n] * h[n]');
+title('Built-In Convolve Function');
 
 function cnv = convolve(a, b)
     L = length(a) + length(b) - 1;

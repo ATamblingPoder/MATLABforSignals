@@ -8,6 +8,7 @@ h2 = un - un5;
 xn = (n == 0);
 clearvars un un5;
 t = tiledlayout(2,1);
+title(t, "Q1 - PostLab - 22102109");
 wn = conv(xn, h1);
 yn = conv(wn, h2);
 nexttile(1);

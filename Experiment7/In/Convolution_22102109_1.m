@@ -6,6 +6,7 @@ f2 = (abs(n) <= 0.5);
 u1n = (n >= 0); u2n = (n >= 5);
 f3 = u1n - u2n;
 t = tiledlayout(3,4);
+title(t, "Q1 - InLab - 22102109");
 nexttile(1, [1, 2]);
 stem(n, f1);
 xlabel('n');

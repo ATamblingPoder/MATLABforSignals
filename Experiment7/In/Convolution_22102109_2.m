@@ -2,6 +2,7 @@ clc;
 clear;
 
 t = tiledlayout(3, 4);
+title(t, "Q2 - InLab - 22102109")
 
 x1 = [-2 0 1 -1 3];
 h1 = [1 2 0 -1];
