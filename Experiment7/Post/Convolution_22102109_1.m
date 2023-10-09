@@ -11,12 +11,14 @@ t = tiledlayout(2,1);
 title(t, "Q1 - PostLab - 22102109");
 wn = conv(xn, h1);
 yn = conv(wn, h2);
+
 nexttile(1);
 stem(yn);
 xlabel('n');
 ylabel('[x[n] * h_1[n]] * h_2[n]');
 title('Part - a');
 clearvars yn;
+
 gn = conv(h1, h2);
 yn = conv(xn, gn);
 nexttile(2);

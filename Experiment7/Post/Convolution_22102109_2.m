@@ -17,6 +17,7 @@ for i = 1:length(n)
         hn(i) = 0;
     end
 end
+
 t = tiledlayout(3, 2);
 title(t, "Q2 - PostLab - 22102109");
 nexttile(1, [1,2]);
