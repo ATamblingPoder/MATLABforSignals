@@ -7,7 +7,7 @@ f_1 = dirac(t);
 f_2 = triangularPulse(t);
 f_3 = heaviside(t) - heaviside(t - 5);
 
-% Plotting the base functions of which we will
+% Plotting the base functions of which we will take
 % the convolution of
 my_tile = tiledlayout(3, 4);
 title(my_tile, "\fontname{Inter}CT Convolutions - 22102109 - InLab - Q1");
@@ -25,6 +25,7 @@ fplot(f_3, [-1 6]);
 ylim([-0.5 1.5])
 title("\it u(t) - u(t - 5)")
 
+clearvars f_1 f_2 f_3;
 
 % Part 1 -- Commutativity
 f_1_tau = dirac(tau);
@@ -79,3 +80,4 @@ nexttile(12)
 fplot(part_3_convolution_2, [-5 10])
 ylim([-0.5 1.5])
 title("\it(\delta(t) * tri(t)) * (u(t) - u(t - 5))")
+clearvars;
