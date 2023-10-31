@@ -1,0 +1,11 @@
+tic;
+clc;
+clearvars *;
+syms n k;
+h_n = heaviside(k + 2) - heaviside(k - 2);
+x_n = dirac(k - n + 2) + dirac(k - n + 1) + dirac(k - n - 1);
+the_conv = int(h_n * x_n, k, -Inf, Inf);
+fplot(the_conv);
+ylim([-0.25 3.25]);
+clearvars *;
+toc;
