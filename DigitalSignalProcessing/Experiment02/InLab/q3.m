@@ -7,8 +7,8 @@ my_layout = tiledlayout(2,1);
 
 % Gaussian Random Variables with given
 % mean and variance
-rand1 = random("Normal", 0, 1, [1 1000]);
-rand2 = random("Normal", 0.2, 1, [1 1000]);
+rand1 = 1 * randn(1,1000) + 0;
+rand2 = 1 * randn(1,1000) + 0.2;
 
 % Plotting the random signals first
 nexttile(1);
