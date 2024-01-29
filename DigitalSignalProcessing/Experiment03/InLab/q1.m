@@ -6,7 +6,7 @@ n = -10:1:10;
 my_conv = self_conv([1 3 -2 1], [1 1 0 0]);
 inbuilt_conv = conv([1 3 -2 1], [1 1 0 0]);
 my_layout = tiledlayout(3,2);
-title(my_layout, "Q1 -- InLab -- 22102109");
+title(my_layout, "Q1 - Part 1 -- InLab -- 22102109");
 
 nexttile(1, [1 2]);
 stem([1 3 -2 1], 'filled');
