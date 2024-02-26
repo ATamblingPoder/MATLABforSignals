@@ -1,0 +1,13 @@
+clc;
+clearvars;
+syms z;
+X = (z^3)/((z - 0.5)*(z - 0.75)*(z - 1));
+X = simplifyFraction(X);
+[N,D] = numden(X);
+disp(N);
+disp(D);
+cfn = sym2poly(N);
+cfd = sym2poly(D);
+[r,p,k] = residue(cfn,cfd);
+disp("The residues are: ");
+disp(r);
