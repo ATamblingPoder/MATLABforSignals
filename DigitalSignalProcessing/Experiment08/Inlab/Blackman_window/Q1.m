@@ -1,0 +1,10 @@
+Wp = 0.5;
+Ws = 0.6;
+delp = 0.1;
+dels = 0.1;
+Fs = 8000;
+Wc = (Wp + Ws) / 2;
+N = ceil(6.2*pi / (Ws - Wp));
+b_lowpass = fir1(N, Wc, 'low', blackman(N+1));
+figure;
+freqz(b_lowpass, 1, 512, Fs);
