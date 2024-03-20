@@ -1,0 +1,13 @@
+Wp = 0.5;
+Ws = 0.6;
+delp = 0.1;
+dels = 0.1;
+Fs = 8000;
+Wc = (Wp + Ws) / 2;
+N1=-1*20*log10(dels)-7.95;
+N2=14.36*(Ws-Wp)/2*pi;
+N=N1/N2;
+M=ceil(N);
+b_lowpass = fir1(M, Wc, 'low',hamming(M+1));
+figure(1);
+freqz(b_lowpass, 1, 512);
